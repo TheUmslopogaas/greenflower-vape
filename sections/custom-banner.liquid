@@ -1,0 +1,369 @@
+<!-- flickty carosuel -->
+<style> 
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap');
+    /* flickity-fade */
+    .flickity-enabled.is-fade .flickity-slider > * {
+      pointer-events: none;
+      z-index: 0;
+    }
+    .flickity-enabled.is-fade .flickity-slider > .is-selected {
+      pointer-events: auto;
+      z-index: 1;
+    }
+    .circles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .circles li {
+      {% if section.settings.circle_animation == true %}
+        position: absolute;
+        display: block;
+        list-style: none;
+        width: 20px;
+        height: 20px;
+        animation: animate 25s linear infinite;
+        bottom: -150px;
+      {% endif %}
+    }
+    .circles li:nth-child(1),.circles li:nth-child(2),.circles li:nth-child(3){
+      background: url("https://cdn.shopify.com/s/files/1/0577/5812/2164/files/background_3.svg") center/contain no-repeat;
+    }
+    .circles li:nth-child(4),.circles li:nth-child(5),.circles li:nth-child(6){
+      background: url("https://cdn.shopify.com/s/files/1/0577/5812/2164/files/background_2.svg") center/contain no-repeat;
+    }
+    .circles li:nth-child(7),.circles li:nth-child(8),.circles li:nth-child(9),.circles li:nth-child(10){
+      background: url("https://cdn.shopify.com/s/files/1/0577/5812/2164/files/background_1.svg") center/contain no-repeat;
+    }
+    .circles li:nth-child(1) {
+        left: 25%;
+        width: 120px;
+        height: 120px;
+        animation-delay: 0s;
+    }
+    .circles li:nth-child(2) {
+        left: 10%;
+        width: 40px;
+        height: 40px;
+        animation-delay: 2s;
+        animation-duration: 12s;
+    }
+    .circles li:nth-child(3) {
+        left: 70%;
+        width: 40px;
+        height: 40px;
+        animation-delay: 4s;
+    }
+    .circles li:nth-child(4) {
+        left: 40%;
+        width: 90px;
+        height: 90px;
+        animation-delay: 0s;
+        animation-duration: 18s;
+    }
+    .circles li:nth-child(5) {
+        left: 65%;
+        width: 40px;
+        height: 40px;
+        animation-delay: 0s;
+    }
+    .circles li:nth-child(6) {
+        left: 75%;
+        width: 160px;
+        height: 160px;
+        animation-delay: 3s;
+    }
+    .circles li:nth-child(7) {
+        left: 0;
+        width: 250px;
+        height: 250px;
+        animation-delay: 7s;
+        bottom: -250px;
+    }
+    .circles li:nth-child(8) {
+        left: 50%;
+        width: 35px;
+        height: 35px;
+        animation-delay: 15s;
+        animation-duration: 45s;
+    }
+    .circles li:nth-child(9) {
+        left: 20%;
+        width: 100px;
+        height: 100px;
+        animation-delay: 2s;
+        animation-duration: 35s;
+    }
+    .circles li:nth-child(10) {
+        left: 85%;
+        width: 250px;
+        height: 250px;
+        animation-delay: 0s;
+        animation-duration: 11s;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+      }
+      100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+      }
+    }
+      /*circle animation ends*/
+  
+    .wenexus-custom_banner .section-wrapper {
+      {% if section.settings.full_width == true %}
+          width: 100%
+      {%else%}
+          width: 97%;
+      {% endif %}
+        margin: 0 auto;
+        background: url(https://cdn.shopify.com/s/files/1/0577/5812/2164/files/product-single-bg_03_ff53afd2-7cb8-49be-944b-b3a2a9992099.png?v=1625467554);
+      {% if section.settings.background_img %}
+          background: url('{{ section.settings.background_img | img_url: 'master' }}');
+      {% elsif section.settings.background_color %}
+          background: {{section.settings.background_color}};
+      {% else %}
+        background: {{section.settings.background_video}};
+      {% endif %}
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+          padding: 100px 0;
+        overflow: hidden;
+        height: 700px;
+        position: relative;
+        {% if section.settings.background_animation == true %}
+        animation-name: color;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        background: linear-gradient(-45deg, #dcf79d, #80e780, #1bd6aa, #5dc0fa);
+        background-size: 400% 400%;
+      {% endif %}
+    } 
+  
+    @keyframes color {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .wenexus-custom_banner .contaier{
+      max-width: 1300px;
+      width: 90%;
+      margin: 0 auto;
+      position: relative;
+      margin-top: -550px;
+    }
+    .wenexus-custom_banner .section-heading{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-bottom: 80px;
+    }
+    .wenexus-custom_banner .section-heading h1{
+      display: inline-block;
+      text-align: center;
+      font-size: 60px;
+      font-weight: 900;
+      {% if section.settings.title_color %}
+        color: {{section.settings.title_color}};
+      {% endif %}
+      font-family: Work Sans;
+    }
+    .section-heading h1 {
+      font-weight: bold;
+    }
+    .wenexus-custom_banner .section-heading h1 + h1{
+      margin-left: 100px;
+    }
+    .wenexus-custom_banner .section-feature-img{
+      max-width: 450px;
+      margin: 0 auto;
+    }
+    .carousel-cell {
+      width: 100%;
+    }
+    .wenexus-custom_banner .section-feature-img img{
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+  	.wenexus-custom_banner .section-feature-img{
+  		margin-top: -50px;
+    }
+      @media only screen and (max-width: 826px){
+        .wenexus-custom_banner .section-heading h1 + h1{
+          margin-left: 0;
+      }
+      .wenexus-custom_banner .section-heading{
+          flex-direction: column;
+      }
+      }
+      @media only screen and (max-width: 576px){
+       .wenexus-custom_banner .section-heading h1{
+            font-size: 40px;
+        }
+      }
+      @media only screen and (max-width: 576px){
+       .wenexus-custom_banner .contaier{
+          margin-top: -620px;
+       }
+      }
+  </style>
+
+  {% if section.settings.custom_html == blank  %}
+  <div class="section-wrapper">
+            <div class="area">
+                  <ul class="circles">
+                      <li>
+                      </li>
+              <li>
+                      </li>
+              <li>
+                      </li>
+              <li>
+                      </li>
+              <li>
+                      </li>
+              <li>
+                      </li>
+              <li>
+                      </li>
+              <li>
+                      </li>
+              <li>
+                      </li>
+              <li>
+                  </li>
+              </ul>
+          </div>
+  </div>
+        <div class="contaier">
+        <div class="section-heading">
+            <h1 class="section-title-right">{{section.settings.title_left}}</h1>
+            <h1 class="section-title-left">{{section.settings.title_right}}</h1>
+        </div>
+        <div class="section-feature-img main-carousel">
+          {% for block in section.blocks %}
+          <div class="carousel-cell">
+            <img src="{{block.settings.product_image | img_url: 'master'}}" alt="">
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+<!--Flickty Carousel  JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+  {% render 'flickity-fade ' %}
+</script>
+<script>
+	var elem = document.querySelector('.main-carousel');
+	var flkty = new Flickity( elem, {
+    // options
+    cellAlign: 'left',
+    contain: true,
+    prevNextButtons: false,
+    pageDots: false,
+    autoPlay: true,
+    wrapAround: true,
+    fade: true
+});
+</script>
+{% else %}
+  {{section.settings.custom_html}}
+{% endif %}
+
+
+{% schema %}
+  {
+  "name": "Custom Banner",
+	"class": "wenexus-custom_banner",
+	"max_blocks" : 4,
+    "settings": [
+		{
+			"type": "text",
+			"id": "title_left",
+			"label": "Title Left",
+			"default": "Stop Smoking"
+		},
+		{
+			"type": "text",
+			"id": "title_right",
+			"label": "Title Right",
+			"default": "Start Vaping"
+		},
+		{
+			"type": "image_picker",
+			"id": "background_img",
+			"label": "Background Image"
+		},
+		{
+			"type": "text",
+			"id": "background_color",
+			"label": "Background Color"
+		},
+		{
+			"type": "color",
+			"id": "title_color",
+			"label": "Title Text Color"
+		},
+  	{
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full Width",
+      "default": true
+  	},
+    {
+      "type": "checkbox",
+      "id": "background_animation",
+      "label": "Background Animation",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "circle_animation",
+      "label": "Circle Animation",
+      "default": false
+    }
+	],"blocks": [
+		{
+			"name": "Product Image",
+			"type": "product",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id" : "product_image",
+					"label": "Product Image"
+				}
+			]
+		}		
+],
+  	"presets": [
+        {
+            "name": "Custom Banner",
+            "category": "Custom Section"
+        }
+    ]
+  }
+{% endschema %}
+

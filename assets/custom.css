@@ -1,0 +1,20 @@
+/* Global Styling
+******************/
+.page-container .main {margin-top: 0;}
+#shopify-section-footer .section--footer {margin-bottom: 0 !important;}
+.product-btn.product-btn--hover .c-btn {color: #fff;}
+
+
+/* Collection Page
+*******************/
+.template-collection .main {margin-top: 0;}
+
+
+/* Overriding Sections Styles
+******************************/
+/* homepage collection */
+.js-section__home-collection .section__link.section__link--center {
+  max-width: 350px;
+  padding: 15px;  
+  margin: 0 auto;
+}

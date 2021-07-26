@@ -1,0 +1,413 @@
+<style>
+.e-sigar-section-wrapper{
+    background: url(https://cdn.shopify.com/s/files/1/0577/5812/2164/files/product-single-bg_03_ff53afd2-7cb8-49be-944b-b3a2a9992099.png?v=1625467554);
+  	{% if section.settings.background_img %}
+  background: {{section.settings.background_img | img_url: 'master'}};
+  	{%endif%}
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px;
+}
+.e-sigar-prod-features .e-sigar-single-feature .e-sigar-feature-img{
+    height: 40px;
+    width: 40px;
+    margin: 0 auto;
+}
+.e-sigar-prod-features .e-sigar-single-feature .e-sigar-feature-img svg{
+    /* height: 100px; */
+    width: 100%;
+}
+.e-sigar-feature-title{
+    margin-top: 10px;
+}
+.e-sigar-container{
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.e-sigar-title h1{
+    text-align: center;
+}
+.e-sigar-prod-container{
+    display: flex;
+    max-width: 475px;
+    margin: 50px auto;
+    align-items: center;
+    gap: 100px;
+}
+.e-sigar-prod-features{
+    flex: 1;
+}
+.e-sigar-product-image{
+    flex: 2;
+}
+.e-sigar-prod-variants{
+    flex: 1;
+}
+.e-sigar-product-image img{
+    width: 100%;
+}
+.e-sigar-variants ul li{
+    list-style: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 40px auto;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+.e-sigar-variants ul li{
+    background: transparent;
+}
+
+.e-sigar-product-image a{
+    display: block;
+    position: relative;
+    height: 665px;
+    overflow: hidden;
+}
+.e-sigar-product-image a img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    max-width: fit-content;
+    width: auto;
+}
+
+/*  .e-sigar-variants ul li:nth-child(1){
+  	background: #6bcbc6;
+  }
+  .e-sigar-variants ul li:nth-child(2){
+  	background: #d91e58;
+  }
+  .e-sigar-variants ul li:nth-child(3){
+  	background: #fffe7a;
+  }
+  .e-sigar-variants ul li:nth-child(4){
+  	background: #514968;
+  }*/
+.e-sigar-prod-details{
+    font-size: 20px;
+    font-weight: bold;
+}
+.e-sigar-btn a {
+    padding: 10px 30px;
+    background: sandybrown;
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #fff;
+}
+.e-sigar-feature-img{
+    padding-bottom: 10px;
+}
+.e-sigar-single-feature{
+    margin-bottom: 15px;
+}
+.switchImg a img{
+    height: 100%;
+    padding: 5px;
+}
+@media (max-width: 840px){
+    .e-sigar-prod-container{
+        gap: 50px;
+    }
+}
+@media (max-width: 768px){
+    .e-sigar-prod-container{
+        flex-direction: column;
+      	gap: 20px;
+      	margin-bottom: 20px;
+    }
+    .e-sigar-product-image{
+        width: 100%;
+    }
+  	.e-sigar-feature-title p {
+  		margin-bottom: 0;	
+  	}
+  	.e-sigar-variants ul {
+  		margin-left: 0;
+    }
+    .e-sigar-product-image{
+        max-width: 200px;
+    }
+    .e-sigar-prod-features{
+        order: 2;
+    }
+    .e-sigar-product-image{
+        order: 1
+    }
+    .e-sigar-prod-variants{
+        order: 3;
+    }
+    .e-sigar-single-feature{
+        display: inline-block;
+    }
+    .e-sigar-variants ul li{
+        display: inline-block;
+    }
+    .e-sigar-section-wrapper{
+        padding: 150px 0;
+    }
+    .e-sigar-prod-features .e-sigar-single-feature+.e-sigar-single-feature{
+        margin-left: 20px;
+    }
+    .e-sigar-variants ul li+li{
+        margin-left: 20px;
+    }
+
+}
+@media (max-width: 419px){
+    .e-sigar-prod-features .e-sigar-single-feature+.e-sigar-single-feature{
+        margin-left: 10px;
+    }
+    .e-sigar-variants ul li{
+        margin-left: 10px;
+    }
+    
+}
+
+    </style>
+
+<div class="e-sigar-section-wrapper">
+        <div class="e-sigar-container">
+            <div class="e-sigar-title">
+                <h1>{{section.settings.featured_product_title}}</h1>
+            </div>
+            <div class="e-sigar-prod-container">
+                <div class="e-sigar-prod-features">
+                    <div class="e-sigar-single-feature">
+                        <div class="e-sigar-feature-img">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 238.126 238.126" style="enable-background:new 0 0 238.126 238.126;" xml:space="preserve">
+<path d="M205.071,98.678c-1.194-2.728-3.891-4.49-6.869-4.49h-62.33l30.023-84.167c1.197-3.357-0.134-7.094-3.184-8.938
+	c-3.052-1.845-6.979-1.287-9.395,1.333L34.411,131.355c-2.019,2.189-2.551,5.366-1.355,8.094c1.194,2.728,3.891,4.49,6.869,4.49
+	h40.521c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5H57.043l82.365-89.315l-21.24,59.543c-0.818,2.297-0.432,4.849,0.974,6.842
+	c1.405,1.993,3.73,3.178,6.169,3.178h55.772l-82.353,89.305l21.243-59.533c0.82-2.297,0.472-4.849-0.934-6.842
+	s-3.691-3.179-6.13-3.179h-0.074c-3.525,0-6.455,2.432-7.25,5.709l-33.348,93.456c-1.198,3.357,0.133,7.094,3.183,8.938
+	c1.205,0.729,2.547,1.083,3.878,1.083c2.039,0,4.055-0.831,5.517-2.416l118.899-128.938
+	C205.734,104.582,206.266,101.406,205.071,98.678z"/>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+                        </div>
+                        <div class="e-sigar-feature-title">
+                            <p>Optional Power</p>
+                        </div>
+                    </div>
+                    <div class="e-sigar-single-feature">
+                        <div class="e-sigar-feature-img">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 238.126 238.126" style="enable-background:new 0 0 238.126 238.126;" xml:space="preserve">
+<path d="M205.071,98.678c-1.194-2.728-3.891-4.49-6.869-4.49h-62.33l30.023-84.167c1.197-3.357-0.134-7.094-3.184-8.938
+	c-3.052-1.845-6.979-1.287-9.395,1.333L34.411,131.355c-2.019,2.189-2.551,5.366-1.355,8.094c1.194,2.728,3.891,4.49,6.869,4.49
+	h40.521c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5H57.043l82.365-89.315l-21.24,59.543c-0.818,2.297-0.432,4.849,0.974,6.842
+	c1.405,1.993,3.73,3.178,6.169,3.178h55.772l-82.353,89.305l21.243-59.533c0.82-2.297,0.472-4.849-0.934-6.842
+	s-3.691-3.179-6.13-3.179h-0.074c-3.525,0-6.455,2.432-7.25,5.709l-33.348,93.456c-1.198,3.357,0.133,7.094,3.183,8.938
+	c1.205,0.729,2.547,1.083,3.878,1.083c2.039,0,4.055-0.831,5.517-2.416l118.899-128.938
+	C205.734,104.582,206.266,101.406,205.071,98.678z"/>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+                        </div>
+                        <div class="e-sigar-feature-title">
+                            <p>More battery</p>
+                        </div>
+                    </div>
+                    <div class="e-sigar-single-feature">
+                        <div class="e-sigar-feature-img">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 238.126 238.126" style="enable-background:new 0 0 238.126 238.126;" xml:space="preserve">
+<path d="M205.071,98.678c-1.194-2.728-3.891-4.49-6.869-4.49h-62.33l30.023-84.167c1.197-3.357-0.134-7.094-3.184-8.938
+	c-3.052-1.845-6.979-1.287-9.395,1.333L34.411,131.355c-2.019,2.189-2.551,5.366-1.355,8.094c1.194,2.728,3.891,4.49,6.869,4.49
+	h40.521c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5H57.043l82.365-89.315l-21.24,59.543c-0.818,2.297-0.432,4.849,0.974,6.842
+	c1.405,1.993,3.73,3.178,6.169,3.178h55.772l-82.353,89.305l21.243-59.533c0.82-2.297,0.472-4.849-0.934-6.842
+	s-3.691-3.179-6.13-3.179h-0.074c-3.525,0-6.455,2.432-7.25,5.709l-33.348,93.456c-1.198,3.357,0.133,7.094,3.183,8.938
+	c1.205,0.729,2.547,1.083,3.878,1.083c2.039,0,4.055-0.831,5.517-2.416l118.899-128.938
+	C205.734,104.582,206.266,101.406,205.071,98.678z"/>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+                        </div>
+                        <div class="e-sigar-feature-title">
+                            <p>More Smoke</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end product features -->
+
+                <!-- producut Image -->
+                <div class="e-sigar-product-image">
+                    {% assign product = section.settings.product %}
+                    <a href="{{product.url}}" class="img-wrapper-1"><img src="{{product.featured_image | img_url: 'master'}}" alt=""></a>
+                </div>
+                <!-- end prod image -->
+
+                <!-- prod-color-variant-starts -->
+                <div class="e-sigar-prod-variants">
+                    <div class="e-sigar-variants">
+                        <ul>
+                            
+                            {% assign product = section.settings.product %}
+
+                            {% for variant in product.variants %}
+                                <li class="switchImg"><a href="javascript:void(0)"><img src="{{ variant.image.src | img_url: 'master'}}" alt=""></a></li>
+                            {% endfor %}
+                            
+
+							<!-- <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="e-sigar-prod-details">
+                <div class="e-sigar-prod-title">iStick Amnis 2 Kit is a new member of iStick family</div>
+                <div class="e-sigar-btn"><a href="{{product.url}}">Shop Now</a></div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    // let switchImgParent = document.querySelectorAll('.swtch-img');
+    let switchImgParent = document.querySelectorAll('.switchImg');
+    console.log(switchImgParent);
+
+    let prodImg = document.querySelector('.img-wrapper-1 img');
+
+    let imgDis = (imgSrc) => {
+        prodImg.src = imgSrc;
+    }
+    switchImgParent.forEach( (img,index) => {
+        img.addEventListener('mouseover', () => {
+            imgSrc = img.querySelector('img').getAttribute('src');
+            console.log(imgSrc);
+
+            imgDis(imgSrc);
+        })
+    })
+</script>
+
+{% schema %}
+  {
+    "name": "Featured Product",
+    "settings": [
+		{
+          "type": "text",
+          "id" : "featured_product_title",
+          "label" : "Section Title",
+		  "default": "Choose Your E-Cigarette"
+		},
+		{
+		"type": "product",
+		"id": "product",
+		"label" : "Select Product"
+		},
+		{
+		"type": "image_picker",
+		"id": "background_img",
+		"label": "Background Image"
+		},
+		{
+		"type" : "text",
+		"id": "prod_sub",
+		"label": "product_subtitle"
+		}
+	],
+	"presets": [
+        {
+            "name": "Featured Product",
+            "category": "Custom Section"
+        }
+    ]
+  }
+    
+{% endschema %}
